@@ -1,0 +1,16 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+const Product_1 = require("./classes/Product");
+const User_1 = require("./classes/User");
+const user1 = new User_1.User("Derek Owens", "Haiti", "gu@ikigade.bg");
+const user2 = new User_1.User("Owen Joseph", "Guernsey", "amehe@lulozaol.ir");
+const user3 = new User_1.User("Madge Baldwin", "Palestinian Territories", "jutat@ufilo.cg");
+const product1 = new Product_1.Product("Calça", 500);
+product1.show();
+product1.comment("Essa calça é muito boa", user1);
+product1.comment("Essa calça é muito cara", user2);
+product1.comment("Essa calça é péssima", user3);
+product1.rate(5, user1);
+product1.rate(3, user2);
+product1.rate(1, user3);
+product1.showDetails();
